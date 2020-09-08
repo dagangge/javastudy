@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/9/7
  **/
 @RestController
-public class hellocontroller {
+public class helloController {
     @GetMapping("hello")
     public String hello(@RequestParam(required = false,name = "who") String who) {
         if (StrUtil.isBlank(who)) {
             who = "world";
         }
         return "hello" + who;
-    }
-}
+    }}
